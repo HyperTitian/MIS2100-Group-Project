@@ -27,3 +27,7 @@ git commit -m "adding GUI branch"
 !git add
 !git status
 !git add *
+!git status
+!git commit -m "I added to the branch"
+!git push
+!git add *
