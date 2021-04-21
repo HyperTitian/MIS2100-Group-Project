@@ -57,5 +57,20 @@ output2 = Text(root, width = 19, height = 10, bg = "#071A33", fg = "white", wrap
 output2.place(x = 362, y = 276)
 output2.insert(END, "This is output field 2")
 
+input1 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
+input1.place(x = 54, y = 74)
+
+input2 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
+input2.place(x = 54, y = 134)
+
+input3 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
+input3.place(x = 344, y = 74)
+
+input4 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
+input4.place(x = 344, y = 134)
+
+input5 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
+input5.place(x = 344, y = 194)
+
 # The really important stuff
 root.mainloop()
