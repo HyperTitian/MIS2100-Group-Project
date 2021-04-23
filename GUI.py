@@ -7,11 +7,13 @@ This is a temporary script file.
 
 # The important stuff
 from tkinter import *
+from Moving_Average import moving_average
+
 root = Tk()
 root.geometry("600x600")
 
 # Import pictures
-bg = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/Background.png", master = root)
+bg = PhotoImage(file = "Background.png", master = root)
 string = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/String.png", master = root)
 text = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/Text.png", master = root)
 button = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/Button.png", master = root)
@@ -43,12 +45,6 @@ text2 = Label(root, width = 200, height = 200, image = text, highlightthickness 
 text2.place(x = 340, y = 240)
 
 # Things that move
-button1 = Button(root, width = 50, height = 50, image = button)
-button1.place(x = 50, y = 460)
-
-button2 = Button(root, width = 50, height = 50, image = button)
-button2.place(x = 340, y = 460)
-
 output1 = Text(root, width = 19, height = 10, bg = "#071A33", fg = "white", wrap = WORD, borderwidth = 0)
 output1.place(x = 72, y = 276)
 output1.insert(END, "This is output field 1")
@@ -59,6 +55,7 @@ output2.insert(END, "This is output field 2")
 
 input1 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
 input1.place(x = 54, y = 74)
+input1.insert(0, "Enter desired ticker")
 
 input2 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
 input2.place(x = 54, y = 134)
@@ -71,6 +68,17 @@ input4.place(x = 344, y = 134)
 
 input5 = Entry(root, width = 33, bg = "#0E294A", fg = "white")
 input5.place(x = 344, y = 194)
+
+def button1Click():
+    output1.delete("1.0", "end")
+    output = moving_average(input1.get())
+    output1.insert(END, output)
+    
+button1 = Button(root, width = 50, height = 50, image = button, command = button1Click)
+button1.place(x = 50, y = 460)
+
+button2 = Button(root, width = 50, height = 50, image = button)
+button2.place(x = 340, y = 460)    
 
 # The really important stuff
 root.mainloop()
