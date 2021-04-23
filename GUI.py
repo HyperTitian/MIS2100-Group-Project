@@ -14,9 +14,9 @@ root.geometry("600x600")
 
 # Import pictures
 bg = PhotoImage(file = "Background.png", master = root)
-string = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/String.png", master = root)
-text = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/Text.png", master = root)
-button = PhotoImage(file = "C:/Users/hands/MIS2100 Group Project/Button.png", master = root)
+string = PhotoImage(file = "String.png", master = root)
+text = PhotoImage(file = "Text.png", master = root)
+button = PhotoImage(file = "Button.png", master = root)
 
 # Frame the GUI
 canvas = Canvas(root, width = 400, height = 400, highlightthickness = 0)
